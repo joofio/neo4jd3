@@ -238,7 +238,7 @@ function Neo4jD3(_selector, _options) {
                    })
                    .attr('fill', '#ffffff')
                    .attr('font-size', function(d) {
-                       return icon(d) ? (options.nodeRadius + 'px') : '10px';
+                       return icon(d) ? (options.nodeRadius + 'px') : '8px';
                    })
                    .attr('pointer-events', 'none')
                    .attr('text-anchor', 'middle')
@@ -247,7 +247,7 @@ function Neo4jD3(_selector, _options) {
                    })
                    .html(function(d) {
                        var _icon = icon(d);
-                       return _icon ? '&#x' + _icon : d.id;
+                       return _icon ? '&#x' + _icon : d.alias;
                    });
     }
 
